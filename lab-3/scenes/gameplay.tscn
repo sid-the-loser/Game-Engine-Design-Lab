@@ -1,7 +1,38 @@
-[gd_scene format=3 uid="uid://b5c66arsbf264"]
+[gd_scene load_steps=4 format=3 uid="uid://b5c66arsbf264"]
+
+[ext_resource type="Texture2D" uid="uid://ddbpbijqaxgxq" path="res://sprites/ground.webp" id="1_00tan"]
+[ext_resource type="PackedScene" uid="uid://dimoxfrphs4fi" path="res://prefabs/player.tscn" id="2_l1v76"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ct7aa"]
+size = Vector2(948, 66)
 
 [node name="Gameplay" type="Node2D"]
 
 [node name="Level" type="Node" parent="."]
 
 [node name="Ground" type="StaticBody2D" parent="Level"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Level/Ground"]
+position = Vector2(475, 608)
+shape = SubResource("RectangleShape2D_ct7aa")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Level/Ground"]
+position = Vector2(1531, 607)
+shape = SubResource("RectangleShape2D_ct7aa")
+
+[node name="Ground" type="Sprite2D" parent="Level/Ground"]
+texture_repeat = 2
+position = Vector2(475.49988, 610)
+scale = Vector2(5.943751, 0.44)
+texture = ExtResource("1_00tan")
+region_rect = Rect2(-9.28, 0, 19.98, 6.47)
+
+[node name="Ground2" type="Sprite2D" parent="Level/Ground"]
+texture_repeat = 2
+position = Vector2(1535, 607)
+scale = Vector2(5.943751, 0.44)
+texture = ExtResource("1_00tan")
+region_rect = Rect2(-9.28, 0, 19.98, 6.47)
+
+[node name="Player" parent="." instance=ExtResource("2_l1v76")]
+position = Vector2(65, 476)

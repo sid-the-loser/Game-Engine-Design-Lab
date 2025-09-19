@@ -1,6 +1,7 @@
 # Student Details
 
 > Name: Sidharth Suresh
+
 > Student ID: 100938544
 
 # Tick vs. Cross

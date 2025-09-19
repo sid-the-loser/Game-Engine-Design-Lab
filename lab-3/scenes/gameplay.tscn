@@ -1,3 +1,7 @@
 [gd_scene format=3 uid="uid://b5c66arsbf264"]
 
 [node name="Gameplay" type="Node2D"]
+
+[node name="Level" type="Node" parent="."]
+
+[node name="Ground" type="StaticBody2D" parent="Level"]

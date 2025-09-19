@@ -1,6 +1,6 @@
 # Student Details
 
-> Name: Sidharth Suresh
+> Name: Sidharth Suresh (Sid)
 
 > Student ID: 100938544
 

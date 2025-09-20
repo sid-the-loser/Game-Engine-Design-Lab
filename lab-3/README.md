@@ -12,7 +12,7 @@ A game made to show off the use of singletons. Its a game where you move around 
 
 ## Graph
 
-Coming soon...
+![graph](./Graph.png)
 
 # References
 

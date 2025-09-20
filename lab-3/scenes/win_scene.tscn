@@ -1,4 +1,6 @@
-[gd_scene format=3 uid="uid://nheuyp3mve72"]
+[gd_scene load_steps=2 format=3 uid="uid://nheuyp3mve72"]
+
+[ext_resource type="Script" uid="uid://bh5nq5mkjpmkw" path="res://scripts/win_scene.gd" id="1_p78a6"]
 
 [node name="WinScene" type="Control"]
 layout_mode = 3
@@ -7,6 +9,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_p78a6")
 
 [node name="Panel" type="Panel" parent="."]
 layout_mode = 1
@@ -35,6 +38,12 @@ text = "Retry"
 layout_mode = 2
 text = "Main Menu"
 
+[node name="Label" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+text = "Score here"
+horizontal_alignment = 1
+vertical_alignment = 1
+
 [node name="Title" type="Label" parent="."]
 layout_mode = 1
 anchors_preset = 5
@@ -48,3 +57,6 @@ theme_override_font_sizes/font_size = 86
 text = "You WON!"
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[connection signal="button_down" from="VBoxContainer/Retry" to="." method="_on_retry_button_down"]
+[connection signal="button_down" from="VBoxContainer/MainMenu" to="." method="_on_main_menu_button_down"]
